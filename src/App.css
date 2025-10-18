@@ -1,38 +1,118 @@
-.App {
+/* ---------- Base Styling ---------- */
+.app {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f2f6fc; /* Light background */
   min-height: 100vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #0077ff;
+  font-size: 2rem;
+}
+
+/* ---------- Google-style Search Form ---------- */
+form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 30px;
+}
+
+input {
+  width: 500px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid #dfe1e5;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+input:focus {
+  border: 1px solid #4285f4;
+  box-shadow: 0 2px 8px rgba(66, 133, 244, 0.3);
+}
+
+button {
+  margin-left: -50px;
+  padding: 10px 18px;
+  background-color: #4285f4;
   color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #3367d6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ---------- Image Grid ---------- */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+  margin: 30px auto;
+  width: 90%;
+}
+
+.image-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.image-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.image-card:hover img {
+  transform: scale(1.05);
+  opacity: 0.85;
+}
+
+/* ---------- Download Button (Only When Selected) ---------- */
+.image-actions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.download-btn {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.download-btn:hover {
+  background-color: #0077ff;
+}
+
+/* ---------- Selected Image ---------- */
+.image-card.selected {
+  outline: 4px solid #0077ff;
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(0, 119, 255, 0.6);
+}
+
+/* ---------- Loading Text ---------- */
+.loading {
+  font-size: 18px;
+  color: #444;
+  margin: 20px;
 }
