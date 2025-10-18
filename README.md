@@ -6,7 +6,7 @@ It features **infinite scrolling**, a **dark modern UI**, and the ability to **d
 ---
 
 ## 🚀 Live Demo
-👉 [Click here to view the live app](https://polagonimanasa.github.io/img-search-app/)
+👉 [Click here to view the live app](https://polagonimanasa.github.io/image-search-app/)
 
 ---
 
@@ -36,7 +36,7 @@ It features **infinite scrolling**, a **dark modern UI**, and the ability to **d
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/polagonimanasa/img-search-app.git
+   git clone https://github.com/polagonimanasa/image-search-app.git
    cd img-search-app
 
 2. Install dependencies:
@@ -66,7 +66,7 @@ This project is deployed using GitHub Pages.
 2. Add homepage in package,json:
 
    ```bash
-   "homepage": "https://polagonimanasa.github.io/img-search-app
+   "homepage": "https://polagonimanasa.github.io/image-search-app
 
 3. Add deploy scripts in package.json:
    
